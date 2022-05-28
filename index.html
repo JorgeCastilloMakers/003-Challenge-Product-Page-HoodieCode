@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoodie Code</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/379028bca9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <label for="menu" class="nav-label">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <div class="logo">
+            <img src="assets/logo-hoodiecode.png" alt="logo-hoodiecode">
+        </div>
+        <nav>
+            <input type="checkbox" id="menu" class="nav-input">
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-item">Collections</a></li>
+                <li><a href="#" class="nav-item">Frontend</a></li>
+                <li><a href="#" class="nav-item">Backend</a></li>
+                <li><a href="#" class="nav-item">About</a></li>
+                <li><a href="#" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <img src="assets/shopping-bag.png" alt="cart">
+        </div>
+        <div class="avatar">
+            <img src="assets/avatar.png" alt="avatar-sign">
+        </div>
+    </header>
+    <main>
+        <section class="product">
+            <div class="image-container">
+                <div class="image-product">
+                    <a href="#image1">
+                        <img class=".materialboxed" src="assets/hoodie-mockup-of-a-cool-young-woman-eating-a-lollipop-m15214.png" alt="github-hoodie">
+                    </a>
+                </div>
+                <div class="image-product-galery">
+                    <a href="#image2">
+                        <img src="assets/back-view-hoodie-mockup-of-a-woman-in-a-studio-featuring-trendy-stickers-m15210.png" alt="">
+                    </a>
+                    <a href="#image3">
+                        <img src="assets/hoodie-mockup-featuring-a-serious-woman-posing-m20715-r-el2.png" alt="">
+                    </a>
+                    <a href="#image4">
+                        <img src="assets/hoodie-mockup-of-an-e-guy-posing-in-front-of-a-white-background-m15136.png" alt="">
+                    </a>
+                    <a href="#image5">
+                        <img src="assets/illustrated-hoodie-mockup-featuring-a-young-man-biting-a-cookie-m15145.png" alt="">
+                    </a>
+                </div>
+                <article class="light-box" id="image1">
+                    <a href="#image5" class="next"><i class="fa-solid fa-arrow-left"></i></a>
+                    <img src="assets/hoodie-mockup-of-a-cool-young-woman-eating-a-lollipop-m15214.png" alt="">
+                    <a href="#image2" class="next"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="" class="close"><i class="fa-solid fa-xmark"></i></a>
+                </article>
+                <article class="light-box" id="image2">
+                    <a href="#image1" class="next"><i class="fa-solid fa-arrow-left"></i></a>
+                    <img src="assets/back-view-hoodie-mockup-of-a-woman-in-a-studio-featuring-trendy-stickers-m15210.png" alt="">
+                    <a href="#image3" class="next"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="" class="close"><i class="fa-solid fa-xmark"></i></a>
+                </article>
+                <article class="light-box" id="image3">
+                    <a href="#image2" class="next"><i class="fa-solid fa-arrow-left"></i></a>
+                    <img src="assets/hoodie-mockup-featuring-a-serious-woman-posing-m20715-r-el2.png" alt="">
+                    <a href="#image4" class="next"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="" class="close"><i class="fa-solid fa-xmark"></i></a>
+                </article>
+                <article class="light-box" id="image4">
+                    <a href="#image3" class="next"><i class="fa-solid fa-arrow-left"></i></a>
+                    <img src="assets/hoodie-mockup-of-an-e-guy-posing-in-front-of-a-white-background-m15136.png" alt="">
+                    <a href="#image5" class="next"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="" class="close"><i class="fa-solid fa-xmark"></i></a>
+                </article>
+                <article class="light-box" id="image5">
+                    <a href="#image4" class="next"><i class="fa-solid fa-arrow-left"></i></a>
+                    <img src="assets/illustrated-hoodie-mockup-featuring-a-young-man-biting-a-cookie-m15145.png" alt="">
+                    <a href="#image1" class="next"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="" class="close"><i class="fa-solid fa-xmark"></i></a>
+                </article>
+            </div>
+            <div class="product-description">
+                <h2>
+                    Hoodie Code Clothing
+                </h2>
+                <h1>
+                    Hoddie technologies Edition
+                </h1>
+                <p>
+                    The perfect hoodie for developers, choose the pattern and color that you like the most.
+                </p>
+                <div class="price">
+                    <p>$200.00</p>
+                    <p><span>50%</span></p>
+                </div>
+                <p id="discount">
+                    $400.00
+                </p>
+                <div class="add-cart">
+                    <div class="quantity">
+                        <button onclick="decrement()" class="quantity-btn">-</button>
+                        <h2 id="root"></h2>
+                        <button onclick="increment()" class="quantity-btn">+</button>
+                    </div>
+                    <button class="add-cart-btn">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                         Add to cart
+                    </button>
+                    <script>
+                        var data=0;
+                        document.getElementById("root").innerText=data;
+                        function decrement(){
+                            data=data-1;
+                            document.getElementById("root").innerText=data;
+                        }
+                        function increment(){
+                            data=data+1;
+                            document.getElementById("root").innerText=data;
+                        }
+                    </script>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
